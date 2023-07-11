@@ -4,7 +4,6 @@ import { getData, BASE_URL, postData, delData, newData } from "./http.js"
 let form = document.querySelector('form')
 let age = document.querySelector('#age')
 let nameInput = document.querySelector('#name')
-let btn = document.querySelector('.btn')
 
 let box1 = document.querySelector('.box1')
 let box2 = document.querySelector('.box2')
@@ -43,20 +42,18 @@ form.onsubmit = (event) => {
                 .then(res => reload(res))
         })
 
-
-
 }
 function catigories(age) {
     if (age === 666) {
-        return "/img/black.jpg";
+        return "https://png.pngtree.com/png-vector/20200215/ourmid/pngtree-robot-skull-with-sacred-geometry-png-image_2148360.jpg"
     } else if (age === 777) {
-        return "/img/new.jpg";
+        return "https://cdn.vectorstock.com/i/preview-1x/90/68/robot-vector-909068.webp"
     } else if (age >= 25 && age <= 50) {
-        return "/img/robot.png";
+        return "https://cdn.vectorstock.com/i/preview-1x/37/73/scared-funny-robot-talking-on-a-retro-phone-vector-26793773.webp"
     } else if (age <= 25) {
-        return "/img/50r.png";
+        return "https://cdn.vectorstock.com/i/preview-1x/69/44/cute-robot-retro-ai-machine-in-headphones-funny-vector-46066944.webp"
     } else if (age >= 50) {
-        return "/img/puxliy.png";
+        return "https://cdn.vectorstock.com/i/preview-1x/39/68/robot-dj-on-vinyl-turntables-concert-music-vector-38163968.webp"
     }
 }
 
@@ -113,20 +110,13 @@ function reload(users) {
 
         edit.onclick = async () => {
             openModal(item.id, item.firstName, item.age)
-            // const relData = await getData('/users')
-            //     reload(relData)
-
+           
         }
     }
     age.value = ''
     nameInput.value = ''
 }
 
-
-// async function newData(userId) {
-//     const relData = await getData('/users')
-//     reload(relData)
-// }
 async function usersNewData()  {
    let ud = await getData('/users')
     reload(ud)
@@ -153,5 +143,5 @@ function openModal(userId, currNm, currAge) {
 }
 
 function closeModal() {
-    modal.style.display = 'none';
+    modal.style.display = 'none'
 }
