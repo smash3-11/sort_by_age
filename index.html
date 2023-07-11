@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sort by age</title>
+  <link rel="icon" href="img/master.png">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/spinner-two-alt.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="box">
+      <form action="#">
+        <div class="form-group">
+          <label for="name">Имя</label>
+          <input id="name" type="text" placeholder="Name" />
+        </div>
+        <div class="form-group">
+          <label for="age">Возраст</label>
+          <input id="age" type="number" placeholder="Age" />
+        </div>
+        <button class="btn">Добавить</button>
+      </form>
+    </div>
+
+    <div class="big-box">
+      <div class="c">
+        <h2 class="title">Люди до 25</h2>
+        <div class="box1">
+          <div class="item">
+            <p class="nm">Alex Adams <i class="gg-spinner-two-alt"></i> <span>
+                <img
+                  src="https://w7.pngwing.com/pngs/695/64/png-transparent-futurama-bender-futurama-worlds-of-tomorrow-leela-bender-philip-j-fry-bender-text-cartoon-applause-thumbnail.png"
+                  alt="robot">
+              </span></p>
+            <p class="age_p"><span>Loading</span> ....</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="c">
+        <h2 class="title">Люди до 50</h2>
+        <div class="box2">
+        </div>
+      </div>
+
+      <div class="c">
+        <h2 class="title">Остальные</h2>
+        <div class="box3">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2>Изменить данные</h2>
+      <label for="newName">Новое имя:</label>
+      <input type="text" id="newName" placeholder="Введите новое имя">
+      <label for="newAge">Новый возраст:</label>
+      <input type="number" id="newAge" placeholder="Введите новый возраст">
+      <button id="saveChanges">Сохранить</button>
+      <button id="cancelChanges">Отмена</button>
+    </div>
+  </div>
+
+
+  <script type="module" src="js/js.js"></script>
+</body>
+
+</html>
